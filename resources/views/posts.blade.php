@@ -9,6 +9,7 @@
 
            <div>
                {{ $post->excerpt }}
+
            </div>
        </article>
     @endforeach
