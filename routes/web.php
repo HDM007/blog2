@@ -25,10 +25,10 @@ Route::get('/', function () {
 
 
 
-Route::get('posts/{post}', function ($id) {
-    $post = Post::findOrFail($id);
-
+Route::get('posts/{post:slug}', function (Post $post) {
+    //find post matching provided slug and give firstOrFail.
     return view('post', [
         'post' => $post
     ]);
+    //route-model binding. route key bound to Eloquent model.
 });
